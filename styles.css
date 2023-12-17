@@ -1,0 +1,156 @@
+@font-face {
+    font-family: A-Space;
+    src: url(A-Space\ Black\ Demo.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 6dvh;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+a:visited{
+    text-decoration: underline;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2dvh;
+    padding-bottom: 2dvh;
+    background: #120813a1;
+    color: white;
+    position: fixed;
+    width: 100dvw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+}
+
+header{
+    position: fixed;
+    z-index: 98;
+}
+
+section{
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    flex-direction: column;
+    scroll-snap-align: start;
+    overflow: hidden;
+    padding-top: 4vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+section#banner{
+    position: relative;
+    z-index: 80;
+    padding: 0;
+    background: radial-gradient(rgb(0, 0, 0) 0%, rgb(37, 0, 71) 68%, rgb(16, 5, 66) 100%);
+    h1{
+        position: relative;
+        font-family: 'A-Space';
+        font-size: 55px;
+        z-index: 99;
+        text-align: center;
+        top: 25vh;
+        text-shadow: 5px 5px black;
+        color: white;
+    }
+}
+
+.bodies{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 90;
+}
+
+#frosting{
+    background-image: url(media/vale.gif);
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    margin-left: 40.5vw;
+    margin-right: 0vh;
+    margin-top: 30vh;
+    width: 400px;
+    height: 400px;
+    animation: valemotion 30s infinite;
+}
+
+@keyframes valemotion{
+    0%{transform: scale(0.5);}
+    90%{transform: rotate(45deg) scale(1);}
+    100%{transform: scale(0.5);}
+}
+
+#strawberry-cheesecake{
+    background-image: url(media/1111.gif);
+    width: 400px;
+    height: 400px;
+    animation: cheesecakemotion 30s linear infinite;
+}
+
+@keyframes cheesecakemotion{
+    0% {transform: translate(-400px, -400px);}
+    100% {transform: translate(2400px, 400px);}
+}
+
+#ube-cheesecake{
+    background-image: url(media/infected\ cheese\ ring.gif);
+    width: 400px;
+    height: 400px;
+    animation: ubemotion 20s linear infinite;
+}
+
+@keyframes ubemotion{
+    0% {transform: translate(2400px, 400px);}
+    100% {transform: translate(-400px, 30px);}
+}
+
+#choco-butternut{
+    background-image: url(media/pumpkin.gif);
+    width: 100px;
+    height: 100px;
+    animation: pumpkinmotion 10s linear infinite;
+}
+
+@keyframes pumpkinmotion{
+    0%{transform: scale(.05) translate(0px, 0px);}
+    90%{transform: translate(2000px, 10px)}
+    100%{transform: scale(3);}
+}
+
+#stars{
+    display: inline-block;
+    width: 10000px;
+    height: 100%;
+    background: transparent url(media/tinining.gif) repeat;
+    opacity: 35%;
+    background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 82;
+    animation: spark 20s linear infinite;
+}
+
+@keyframes spark{
+    0% {transform: translate3d(0px, 0px, 0px);}
+    100% {transform: translate3d(1000px, 0px, 0px);}
+}
